@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>html을 pdf로 바꿔보기</title>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+  <meta charset='UTF-8'/>
+  <meta content='Content-type: text/html; charset=UTF-8' name='http-equiv'/>
+  <meta content='IE=Edge,chrome=1' http-equiv='X-UA-Compatible'/>
+  <meta content='width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no'
+        name='viewport'/>
+  <link href="/css/bootstrap.min.css" media="screen" rel="stylesheet"/>
+  <style>
+    body {
+      font: 90%/1.4 system-ui;
+      margin: 0;
+      font-family: "NanumGothic"
+    }
+    header {
+      padding: 7vh 5vw;
+      border-bottom: 1px solid #ddd;
+    }
+    header h1,
+    header p {
+      margin: 0;
+    }
+    footer {
+      padding: 7vh 5vw;
+      border-top: 1px solid #ddd;
+    }
+    aside {
+      padding: 7vh 5vw;
+    }
+
+    table {
+      border-collapse: collapse;
+      border: 0;
+    }
+    th,
+    td {
+      border: 1px solid #aaa;
+      background-clip: padding-box;
+      scroll-snap-align: start;
+    }
+    tbody tr:last-child th,
+    tbody tr:last-child td {
+      border-bottom: 0;
+    }
+    thead {
+      z-index: 1000;
+      position: relative;
+    }
+    th,
+    td {
+      padding: 0.6rem;
+      min-width: 6rem;
+      text-align: left;
+      margin: 0;
+    }
+    thead th {
+      position: sticky;
+      top: 0;
+      border-top: 0;
+      background-clip: padding-box;
+    }
+    thead th.pin {
+      left: 0;
+      z-index: 1001;
+      border-left: 0;
+    }
+    tbody th {
+      background-clip: padding-box;
+      border-left: 0;
+    }
+    tbody {
+      z-index: 10;
+      position: relative;
+    }
+    tbody th {
+      position: sticky;
+      left: 0;
+    }
+    thead th,
+    tbody th {
+      background-color: #f8f8f8;
+    }
+  </style>
+</head>
+<body>
+<div >
+  <h1>PDF 만들기</h1>
+  <img src="/image/image.png"/>
+  <h1>Hello 안녕</h1>
+
+  <table >
+    <tr>
+      <th>username</th>
+      <th>age</th>
+      <th>birth_date</th>
+    </tr>
+    <tr th:each="user : ${users}">
+        <td th:text="${user.name}">-</td>
+        <td th:text="${user.age}">-</td>
+        <td th:text="${user.birthDate}">-</td>
+    </tr>
+  </table>
+
+</div>
+</body>
+</html>

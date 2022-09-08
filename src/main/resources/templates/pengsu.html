@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>html을 pdf로 바꿔보기</title>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+  <meta charset='UTF-8'/>
+  <meta content='Content-type: text/html; charset=UTF-8' name='http-equiv'/>
+  <meta content='IE=Edge,chrome=1' http-equiv='X-UA-Compatible'/>
+  <meta content='width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no'
+        name='viewport'/>
+
+  <link href=".../static/css/bootstrap.min.css"  rel="stylesheet"/>
+  <link href="../static/css/bootstrap.min.css"  rel="stylesheet"/>
+  <link href="static/css/bootstrap.min.css"  rel="stylesheet"/>
+  <link href="/static/css/bootstrap.min.css"  rel="stylesheet"/>
+  <link href="../css/bootstrap.min.css"  rel="stylesheet"/>
+  <link href=".../css/bootstrap.min.css"  rel="stylesheet"/>
+  <link href=".../bootstrap.min.css"  rel="stylesheet"/>
+  <link href="../bootstrap.min.css"  rel="stylesheet"/>
+  <link href="bootstrap.min.css"  rel="stylesheet"/>
+
+  <style>
+    body {
+      color: #555;
+      padding: 0px;
+      font-family: "NanumGothic"
+    }
+
+    .main {
+      margin: auto;
+      padding: 15px;
+      border-radius: 1px;
+    }
+
+    .logo-image {
+      width: 40%;
+      max-width: 300px;
+      float: right;
+    }
+
+    .main h1 {
+      margin: 100px 0 10px 15px;
+      width: 100%;
+      font-size: 35px;
+    }
+
+    .info-box {
+      margin-top: 40px;
+      padding-right: 15px;
+    }
+
+    .info {
+      width: 100%;
+      margin-left: 15px;
+    }
+
+    .title {
+      font-weight: lighter;
+      color: #42A5F5;
+      vertical-align: top;
+      font-size: 17px;
+    }
+
+    .description {
+      vertical-align: top;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+<div class="container main">
+  <h1>귀여운 펭수</h1>
+  <img class="logo-image" src="/image/image.png"/>
+  <img class="logo-image" src="https://upload.wikimedia.org/wikipedia/ko/d/d4/%ED%8E%AD%EC%88%98.jpg"/>
+
+  <h1>Hello 안녕</h1>
+
+  <div class="info-box">
+    <div class="info">
+      <h2 class="title">이름</h2>
+      <p class="description" th:text="${name}"/>
+    </div>
+
+    <div class="info">
+      <h2 class="title">나이</h2>
+      <p class="description" th:text="${age}"/>
+    </div>
+
+    <div class="info">
+      <h2 class="title">직업</h2>
+      <p class="description" th:text="${job}"/>
+    </div>
+
+    <div class="info">
+      <h2 class="title">거주지</h2>
+      <p class="description" th:text="${address}"/>
+    </div>
+
+    <div class="test1">test1</div>
+    <div class="test2">test2</div>
+    <div class="test3">test3</div>
+  </div>
+</div>
+</body>
+</html>
